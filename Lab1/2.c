@@ -6,7 +6,7 @@
 int main ()
 {
   float x;
-  printf("x: ");
+
   scanf("%f", &x);
   if (x > 0 && x <= 5)
     {

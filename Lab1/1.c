@@ -1,13 +1,13 @@
-//
+
 // Created by crystal on 17.09.2026.
 //
 
 #include <stdio.h>
 
-int main()
+int
+main ()
 {
   float x;
-  printf("x: ");
   scanf("%f", &x);
   if (x > 0)
     {
@@ -39,4 +39,5 @@ int main()
     {
       printf("функції не існує для заданого ікс");
     }
+  return 0;
 }
