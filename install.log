@@ -1,0 +1,11 @@
+[22:13:20 2026-10-10] FETCHING Version 2.45.3
+[22:13:20 2026-10-10] CREATING /Users/crystal/.spicetify
+[22:13:21 2026-10-10] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.45.3/spicetify-2.45.3-darwin-arm64.tar.gz
+[22:13:22 2026-10-10] EXTRACTING /Users/crystal/.spicetify/spicetify.tar.gz
+[22:13:22 2026-10-10] SETTING EXECUTABLE PERMISSIONS TO /Users/crystal/.spicetify/spicetify
+[22:13:22 2026-10-10] REMOVING /Users/crystal/.spicetify/spicetify.tar.gz
+[22:13:22 2026-10-10] APPENDING /Users/crystal/.spicetify to PATH in /Users/crystal/.zshrc
+[22:13:22 2026-10-10] spicetify v2.45.3 was installed successfully to /Users/crystal/.spicetify
+[22:13:22 2026-10-10] Open a new terminal or reload your shell profile to use spicetify:
+[22:13:22 2026-10-10]   source "/Users/crystal/.zshrc"
+[22:13:22 2026-10-10] Then run 'spicetify --help' to get started
