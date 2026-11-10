@@ -24,6 +24,6 @@ main ()
     }
   double result = 0.5 * prod;
   counter+=2;
-  printf ("Результат для n = %d, x = %lf; пройдено %d кроків: %lf\n", n, x, counter, result);
+  printf ("Результат для n = %d, x = %lf; пройдено %d кроків: %.7lf\n", n, x, counter, result);
   return 0;
 }

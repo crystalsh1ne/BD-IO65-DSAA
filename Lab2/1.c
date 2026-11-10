@@ -48,6 +48,6 @@ main ()
       P *= (a / b);
       counter+=2;
     }
-  printf("Результат для n = %d, x = %lf; пройдено %d кроків: %lf\n", n, x, counter, P);
+  printf("Результат для n = %d, x = %lf; пройдено %d кроків: %.7lf\n", n, x, counter, P);
   return 0;
 }
