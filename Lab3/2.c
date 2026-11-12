@@ -51,6 +51,7 @@ pop (Stack *s, char *val)
 {
   if (isEmpty (s))
     {
+      printf ("The stack is empty--cannot do pop operation.\n");
       return false;
     }
   Node *temp = s->top;
@@ -67,6 +68,27 @@ byebye (Stack *s)
   while (!isEmpty (s))
     {
       pop(s, &ch); // xd
+    }
+}
+
+void
+stressTest ()
+{
+  Stack stack;
+  init(&stack);
+  char dummy;
+  if (pop(&stack, &dummy) == false)
+    {
+      printf("Pop operatior for empty stack!\n");
+    }
+
+  for (int i = 0; i < 105; i++)
+    {
+      if (push (&stack, '0') == false)
+        {
+          printf("Push operation for full stack!\n");
+          break;
+        }
     }
 }
 
@@ -125,5 +147,7 @@ main ()
     {
       printf ("%s is incorrect.\n", test_string);
     }
+  printf("--- TEST BOUNDARIES ---\n");
+  stressTest();
   return 0;
 }

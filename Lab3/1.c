@@ -64,12 +64,36 @@ byebye (Stack *stack)
   stack->top = -1;
 }
 
+
+void
+stressTest ()
+{
+  Stack stack;
+  init(&stack);
+  char dummy;
+  if (pop(&stack, &dummy) == false)
+    {
+      printf("Pop operatior for empty stack!\n");
+    }
+
+  for (int i = 0; i < 105; i++)
+    {
+      if (push (&stack, '0') == false)
+        {
+          printf("Push operation for full stack!\n");
+          break;
+        }
+    }
+}
+
+
 // core logic is under this message (i decided not to break down in extra function)
+
 
 int
 main ()
 {
-  char test_string[] = "((()))"; // max depth is 3, correct
+  char test_string[] = "(())";
   Stack stack;
   init(&stack);
   int current_depth = 0;
@@ -120,6 +144,8 @@ main ()
     {
       printf ("%s is incorrect.\n", test_string);
     }
+  printf("--- TEST BOUNDARIES --\n");
+  stressTest();
   return 0;
 }
 
