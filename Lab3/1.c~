@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define MAXSIZE 100
+
+typedef struct
+{
+  int top;
+  char data[MAXSIZE];
+}
+  Stack;
+
+void init(Stack *stack)
+{
+  stack->top = -1;
+}
+
+
+bool isFull(Stack *stack)
+{
+  return stack->top == MAXSIZE-1;
+}
+
+bool isEmpty(Stack *stack)
+{
+  return stack->top == -1;
+}
+
+
+bool push(Stack *stack, char val)
+{
+  if (isFull(stack))
+    {
+      printf("The stack is full--cannot do push operation.\n");
+      return 1;
+    }
+  else
+    {
+      stack->data[++(stack->top)] = val; // a prefix increment operator -- firstly adding +1 to the top then returning a value of the calculation
+    }
+  return 0;
+}
+
+bool pop(Stack *stack)
+{
+  if (isEmpty(stack))
+    {
+      printf("The stack is empty--cannot do pop operation\n");
+      return 1;
+    }
+  else
+    {
+      char value;
+      value = stack->data[(stack->top)--];
+    }
+  return 0;
+}
+
+int currentPos(Stack *stack)
+{
+  return stack->top;
+}
+
+int
+main ()
+{
+  // test_string = "((()))"; // max depth is 3, correct
+  Stack stack;
+  init(&stack);
+  pop(&stack);
+  printf("Current position is: %d\n", currentPos(&stack));
+  push(&stack, 'a');
+  push(&stack, 'b');
+  push(&stack, 'c');
+  printf("Current position is: %d\n", currentPos(&stack));
+  pop(&stack);
+  pop(&stack);
+  pop(&stack);
+
+  // glory to GNU C Reference.
+}
+
+
+
