@@ -41,7 +41,6 @@ main ()
       if (arr[L][j] == X)
         {
           printf ("A match has been found! Element %.2lf is at coordinates [%d][%d].\n", arr[L][j], L, j);
-          continue;
         }
       L = 0;
       R = 7;
