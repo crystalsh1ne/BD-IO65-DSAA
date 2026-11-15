@@ -8,7 +8,7 @@ main ()
 {
   double X;
   printf ("Enter a number (in 0.00 format):\n");
-  scanf ("%.2lf", &X);
+  scanf ("%lf", &X);
   int L = 0;
   int R = M - 1;
   int k = 0;
@@ -27,21 +27,22 @@ main ()
   for (int j = 0; j < N; j++)
     {
       while (L != R)
-	{
-	  k = (L+R)/2;
-	  if (arr[k][j] <= X)
-	    {
-	      R = k;
-	    }
-	  else if (arr[k][j] > X)
-	    {
-	      L = k+1;
-	    }
-	}
+        {
+          k = (L+R)/2;
+          if (arr[k][j] <= X)
+            {
+              R = k;
+            }
+          else if (arr[k][j] > X)
+            {
+              L = k+1;
+            }
+        }
       if (arr[L][j] == X)
-	{
-	  printf ("A match has been found! Element %.2lf is at coordinates [%d][%d].\n", arr[L][j], L, j);
-	}
+        {
+          printf ("A match has been found! Element %.2lf is at coordinates [%d][%d].\n", arr[L][j], L, j);
+          continue;
+        }
       L = 0;
       R = 7;
     }
